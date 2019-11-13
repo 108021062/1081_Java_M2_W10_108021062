@@ -7,21 +7,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int x=sc.nextInt();
-        int a=1,b=1;
-        while (a<=x) {
-            System.out.print(a + "\t");
-            a = a + b;
-            b++;
-        }
-        System.out.println(a);
-        a=1;
-        while (a<=(x+1)){
-            for (int c=1;c<=a;c++){
-                System.out.print(a+"\t");
-            }
-            a++;
-        }
-        System.out.println();
+     int count =0,res=1;
+     for (int a=x;a>1;a--){
+         res*=a;
+     }
+     while (res %10==0){
+         count++;
+         res/=10;
+     }
+        System.out.println(count);
     }
 }
 
